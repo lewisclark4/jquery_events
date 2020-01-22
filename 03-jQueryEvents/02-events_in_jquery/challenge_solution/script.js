@@ -55,11 +55,56 @@ $(document).ready(function(){
     /*applies colour black to body background when mouse enters over buttons 
     and applies colour grey to body background when mouse leaves buttons*/
    
+    
     $(".bottom_button").hover(function(){
         $("body").css("background-color", "black");
     }, function(){
         $("body").css("background-color", 'grey');
     });
     //
-  
+
+
+
+    //changes a tags to buttons and remove hreg
+    
+    $("a").removeAttr("href");
+    $('a').html('<button>Button1</button>', true);
+
+   // buttom fades on mouseover 
+
+    $("button").hover(function(){
+        $("button").fadeTo('fast', 0.5);
+    }, function(){
+        $("button").fadeTo('fast', 1);
+    });
+
+
+    // Button hides text
+ 
+    $(".bottom_button1").click(function(){
+        $('.card_para1').slideToggle('1000');
+     });
+
+    $(".bottom_button2").click(function(){
+        $('.card_para2').slideToggle('slow');
+     });
+
+     $(".bottom_button3").click(function(){
+        $('.card_para3').slideToggle('slow');
+     });
+
+     $(".bottom_button4").click(function(){
+        $('.card_para4').slideToggle('slow');
+     });
+
+     $(".bottom_button5").click(function(){
+        $('.card_para5').slideToggle('slow');
+     });
+
+     $(".bottom_button6").click(function(){
+        $('.card_para6').slideToggle('slow');
+     });
+
 });
+
+
